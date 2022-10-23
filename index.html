@@ -21,23 +21,34 @@
             display: block;
             }
         }
-        /* #myVideo {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        } */
+        body{
+            margin: 0 auto;
+        }
+        canvas {
+            display: block;
+        }
+        #tsparticles {
+            /* position: absolute; */
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        /* style="background: url('./images/bg.jpg');   background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;" */
     </style>
 </head>
-<body class="bg-dark" style="background: url('./images/bg.jpg');   background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;">
-    
+<body class="bg-dark">
+    <div id="tsparticles"></div>
 
     <div class="container-fluid d-flex flex-column flex-md-row" >
         
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex flex-md-column">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-md-column fixed-left">
             <a href="index.html">
             <img src="./images/logo.jpg" alt="logo" width="100" height="140"/>
             </a>
@@ -45,7 +56,7 @@ background-position: center;">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
-            <ul class="navbar-nav w-100 d-flex flex-md-column text-center text-md-end">
+            <ul class="navbar-nav w-100 d-flex flex-md-column text-center text-md-end" style="margin-top:50px ;">
                 <li>
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
@@ -71,6 +82,7 @@ background-position: center;">
 
 
         <main class="ps-0 ps-md-5 flex text-white " id="helloSection" >
+            
             <div style="margin-top: 100px;" >
                 <h1 style="font-family: 'Arial', sans-serif; font-size: 140px; line-height: 85%; font-weight: 600;">Hello,<br>
                 I'm Masum <br></h1>
@@ -79,8 +91,10 @@ background-position: center;">
                 <h1><span class="auto-type"></span></h1>
 
                 <p style="color:rgb(158, 156, 156)">Full Stack Web Developer.</p>
-    
-                <button type="button" class="btn btn-primary" style="border-radius: 0px">Contact Me</button>
+                
+                <a href="contact.html">
+                <button type="button" class="btn btn-primary" style="border-radius: 0px;">Contact Me</button>
+                </a>
             </div>
             
         </main>
@@ -88,57 +102,8 @@ background-position: center;">
         <!-- <video autoplay muted loop id="myVideo">
             <source src="video.mp4" type="video/mp4">
         </video> -->
-        
-        <main class="ps-0 ps-md-5 flex text-white " style="display: none;" id="aboutSection" >
-        <div style="margin-top: 100px;" >
-            <h1 style="font-family: 'Arial', sans-serif; font-size: 110px; line-height: 85%; font-weight: 600;">
-            Me, Myself & I</h1>
-            <p style="color:rgb(158, 156, 156)">To secure a challenging position that utilizes my years of experience, while allowing me the opportunity to grow professionally. In the field of “Web Development” where I can utilize my creative and innovative skills in designing, thereby adding to the development of the organization. My goal is to become a valued asset.</p>
-
-            <button type="button" class="btn btn-primary" style="border-radius: 0px">Contact Me</button>
-        </div>
-        </main>
-
-        <main class="ps-0 ps-md-5 flex text-white " style="display: none;" id="skillSection" >
-            <div style="margin-top: 100px;" >
-                <h1 style="font-family: 'Arial', sans-serif; font-size: 110px; line-height: 85%; font-weight: 600;">
-                Skills</h1>
-                <h3>Languages</h3>
-                <p style="color:rgb(158, 156, 156)">English, Bangla & French.</p>
-
-                <h3>Programming languages</h3>
-                <p style="color:rgb(158, 156, 156)">c, c++, python, java, SQL, SwiftUI.</p>
-
-                <h3>Web development languages</h3>
-                <p style="color:rgb(158, 156, 156)">HTML5, CSS3, JavaScript, Bootstrap, PHP, ReactJS</p>
-
-                <h3>Software</h3>
-                <p style="color:rgb(158, 156, 156)">MS Word, MS Office, Excel, Adobe Photoshop, Illustrator, InDesign, Adobe XD, Premier Pro, OpenShot, github, VS Code</p>
     
-                <button type="button" class="btn btn-primary" style="border-radius: 0px">Contact Me</button>
-            </div>
-        </main>
-
-        <main class="ps-0 ps-md-5 flex text-white " style="display: none;" id="contactSection" >
-            <div style="margin-top: 100px;" >
-                <h1 style="font-family: 'Arial', sans-serif; font-size: 110px; line-height: 85%; font-weight: 600;">
-                Keep in Touch</h1>
-                <h3>Email</h3>
-                <p style="color:rgb(158, 156, 156)">musfiquemasum@gmail.com</p>
-
-                <h3>Mobile</h3>
-                <p style="color:rgb(158, 156, 156)">01632225325</p>
-
-                <h3>Address</h3>
-                <p style="color:rgb(158, 156, 156)">1217/1/A, West Kazipara, Mirpur, Dhaka-1216</p>
-
-                <h3>Facebook</h3>
-                <p style="color:rgb(158, 156, 156)">www.facebook.com/masummusfique</p>
     
-                <button type="button" class="btn btn-primary" style="border-radius: 0px">Contact Me</button>
-            </div>
-        </main>
-
     </div>
 <!-- <script>
         function myFunction() {
@@ -189,6 +154,9 @@ background-position: center;">
         loop: true
     })
 </script>
+<script src='https://cdn.jsdelivr.net/npm/tsparticles@1.37.4/tsparticles.min.js'></script>
+<script  src="./script.js"></script>
+
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
