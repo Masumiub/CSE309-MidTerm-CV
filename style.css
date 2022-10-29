@@ -1,0 +1,71 @@
+body{
+    background-color: black;
+}
+
+.navLeft{
+    position:fixed; 
+}
+.navLeft li{
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.navLeft img{
+    margin-bottom: 55px;
+}
+.navLeft a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+}
+@media only screen and (max-width: 1180px) {
+.navLeft {
+    display: none;
+}
+}
+
+.NavBarTop{
+    display: none;
+}
+
+@media only screen and (max-width: 1179px) {
+.NavBarTop {
+    display: block;
+}
+}
+
+@media only screen and (max-width: 1100px) {
+.container {
+    width: 100%;
+}
+}
+
+ @media only screen and (max-width: 1180px) {
+    .fb {
+        display: none;
+    }
+    .ins{
+        display: none;
+    }
+    .git{
+        display: none;
+    }
+}
+
+.display-1{
+    font-size: 150px;
+}
+
+@media only screen and (max-width: 1180px) {
+    .display-1{
+        font-size: 100px;
+    }
+}
+
+ .card {
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  } 
+
